@@ -55,6 +55,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 User user = new User(resultSet.getString("name"), resultSet.getString("lastname"), resultSet.getByte("age"));
                 user.setId(id);
                 users.add(user);
+                System.out.println(user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
